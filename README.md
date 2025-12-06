@@ -2,7 +2,8 @@
 # Carpool App - Milestone 4
 
 ## What This Is
-Backend server for my carpool app coursework. Made with Node.js and SQLite.
+Backend server for my carpool app coursework. Made with Node.js and 
+SQLite.
 
 ## What It Does
 1. Lets users sign up and log in
@@ -20,15 +21,11 @@ Backend server for my carpool app coursework. Made with Node.js and SQLite.
 ## Test It
 ```bash
 # Sign up
-curl -X POST http://localhost:3000/signup -d '{"username":"test","password":"test","email":"test@test.com"}'
+curl -X POST http://localhost:3000/signup -d 
+'{"username":"test","password":"test","email":"test@test.com"}'
 
 # Log in
 
-curl -X POST http://localhost:3000/login -d '{"username":"test","password":"test"}'
+curl -X POST http://localhost:3000/login -d 
+'{"username":"test","password":"test"}'
 
-# Create ride after login
-
-curl -X POST http://localhost:3000/rides -H "Cookie: token=YOUR_TOKEN" -d '{"from":"A","to":"B"}'
-
-# Search rides
-curl "http://localhost:3000/rides/search?from=A"
