@@ -21,14 +21,14 @@ const db = new sqlite3.Database('./carpool.db', (err) => {
 })
 
 function setupTables() {
-  db.run(`CREATE TABLE IF NOT EXISTS users (
+  db.run('CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY,
     username TEXT UNIQUE,
     email TEXT,
     password TEXT,
     created DATETIME DEFAULT CURRENT_TIMESTAMP
-  )`)
-  db.run(`CREATE TABLE IF NOT EXISTS rides (
+  )')
+  db.run('CREATE TABLE IF NOT EXISTS rides (
     id INTEGER PRIMARY KEY,
     user_id INTEGER,
     from_place TEXT,
@@ -36,7 +36,7 @@ function setupTables() {
     seats INTEGER,
     price REAL,
     created DATETIME DEFAULT CURRENT_TIMESTAMP
-  )`)
+  )')
   console.log('tables ok')
 }
 
@@ -143,5 +143,5 @@ app.post('/logout', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`server on http://localhost:${port}`)
+  console.log('server on http://localhost:${port}')
 })
